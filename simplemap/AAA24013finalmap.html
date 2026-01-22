@@ -114,6 +114,7 @@
     addRouteLayer();
     // 地図にルートを追加
     addRouteLayer();
+    //吹田市行政区レイヤー
     fetch("./N03-23_27_230101.geojson") // 行政区域データを非同期読み込み
                 .then((response) => response.json())
                 .then((data) => {
@@ -127,7 +128,20 @@
                     // GeoJSONレイヤに地図がフィットするように表示範囲を自動調整
                     map.fitBounds(selected_area.getBounds());
             });
+    //吹田市指定避難所
+    fetch('27205_1.geojson') 
+        .then(response => response.json())
+        .then(data => {
+            L.geoJSON(data, {
+                onEachFeature: function (feature, layer) {
+                    if (feature.properties && feature.properties.名称) { 
+                        layer.bindPopup(`<strong>${feature.properties.名称}</strong>`);
+                    } 
+                } 
+            }).addTo(map);
+        });
         </script>
     </body>
 </html>
+
 
