@@ -1,0 +1,222 @@
+body {
+  font-family: "Hiragino Maru Gothic ProN", "Yu Gothic", sans-serif;
+  background: #f8eedc;
+  margin: 0;
+  padding: 0;
+  color: #5a3e2d;
+}
+
+header {
+  text-align: center;
+  background-image: url(wood.jpg);
+  background-size:cover;
+  background-position: center;
+  padding: 30px 10px;
+  border-bottom: 7px solid #b23a3a;
+  color: #fff;
+}
+
+header h1 {
+  color:#fff;
+  font-size: 2em;
+  margin: 0;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-shadow:2px 2px 4px rgba(0,0,0,0.6);
+}
+.title-anim {
+    animation: popTitle 1.2s ease-out forwards;
+}
+@keyframes popTitle {
+    0% { transform: scale(0.5); opacity: 0; }
+    70% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); }
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+nav ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+nav{
+  background: #b23a3a;
+  padding: 10px;
+  display: inline-block;
+  margin: 10px auto 0;
+  border-radius:4px;
+}
+nav a {
+  text-decoration: none;
+  color: #f8eedc;
+  font-weight: bold;
+  font-size:1.1rem;
+}
+
+nav a:hover {
+  color: #d7b894;
+}
+.rank-card {
+    background: #ffffff;
+    border:3px solid #d7b894;
+    border-radius: 18px;
+    box-shadow:0 6px 15px rgba(90,62,43,0.15);
+    width: 90%;
+    max-width: 650px;
+    margin: 35px auto;
+    padding: 22px;
+    border-radius: 20px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transform: translateY(40px);
+    opacity: 0;
+}
+.rank-card.show{
+  animation:showRank 0.8s ease-out forwards;
+}
+@keyframes showRank {
+  0% { transform: translateY(40px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+.rank-title {
+    text-align: center;
+    color: #b23a3a;
+}
+
+/* 画像 */
+.food-img {
+    width: 100%;
+    border-radius: 12px;
+    margin: 15px 0;
+}
+
+/* 店名 */
+.shop-name {
+    text-align: center;
+    font-weight: bold;
+    color: #5a3e2d;
+}
+
+/* 情報ボックス */
+.info-box {
+    background: #faefdf;
+    padding: 12px;
+    border-radius: 12px;
+    margin-top: 12px;
+    border: 1px solid #d7b894;
+    color: #5a3e2d;
+}
+.info-box a {
+    color: #b23a3a;
+}
+
+.info-box a:hover {
+    text-decoration: underline;
+    font-size:larger;
+}
+table{
+  width:100%;
+  border-collapse: collapse;
+  background-color:#faefdf ;
+  color: #5a3e2d;
+  font-size: 15px;
+  border: 2px solid #d7b894;
+}
+table th{
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 1px solid #d7b894;
+}
+table tr th{
+  font-weight: normal;
+}
+table caption {
+    caption-side: top;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px;
+    background-color: #b23a3a;
+    color: #fff;
+    border-radius: 4px 4px 0 0;
+}
+table a {
+    color: #b23a3a;
+    text-decoration: none;
+}
+table a:hover {
+    text-decoration: underline;
+    font-size: larger;
+}
+.slider {
+    width: 100%;
+    overflow: hidden;
+    margin: 30px auto;
+    padding: 10px 0;
+}
+
+.slide-track {
+    display: flex;
+    width: calc(250px * 16); /* 画像8枚 × ループ用8枚 */
+    animation: scroll 40s linear infinite;
+}
+
+.slider img {
+    width: 250px;
+    height: 160px;
+    object-fit: cover;
+    margin: 0 10px;
+    border-radius: 12px;
+    border: 2px solid #d7b894;
+}
+
+/* スライドが流れるアニメーション */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-250px * 8)); 
+    }
+}
+.contents-box {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.content-card {
+    background: #fff;
+    border: 3px solid #d7b894;
+    width: 260px;
+    text-align: center;
+    padding: 15px;
+    border-radius: 16px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.content-card img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.content-card .title {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #5a3e2d;
+}
+
+.content-card a {
+    display: inline-block;
+    margin-top: 8px;
+    text-decoration: none;
+    color: #b23a3a;
+    font-weight: bold;
+}
+
+.content-card a:hover {
+    text-decoration: underline;
+    font-size: 1.1rem;
+}
