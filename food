@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head> 
+<meta charset="UTF-8">
+<title>食べるの大好き</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<style></style>
+</head>
+
+<body>
+    <header>
+        <h1>食べるの大好きトップページ</h1>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">トップページ</a></li>
+                <li><a href="aboutme.html">作成者</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="slider">
+            <div class="slide-track">
+                <img src="a_1cake.jpg" alt="cake">
+                <img src="a_2don.jpg" alt="don">
+                <img src="a_3carry.jpg" alt="carry">
+                <img src="a_4ramen.jpg" alt="ramen">
+                <img src="a_5maguro.jpg" alt="maguro">
+                <img src="a_6karaage.jpg" alt="karaage">
+                <img src="a_7rice.jpg" alt="rice">
+                <img src="a_8wagasi.jpg" alt="wagasi">
+                <!-- ループ用に同じ画像を複製 -->
+                <img src="a_1cake.jpg" alt="cake">
+                <img src="a_2don.jpg" alt="don">
+                <img src="a_3carry.jpg" alt="carry">
+                <img src="a_4ramen.jpg" alt="ramen">
+                <img src="a_5maguro.jpg" alt="maguro">
+                <img src="a_6karaage.jpg" alt="karaage">
+                <img src="a_7rice.jpg" alt="rice">
+                <img src="a_8wagasi.jpg" alt="wagasi">
+            </div>
+        </div>
+        <h2 class="rank-title">Contents</h2>
+        <div class="contents-box">
+            <div class="content-card">
+                <img src="2025food.jpg" alt="2025食べ物ランク">
+                <p class="title">2025年美味しかったもの<br>ランキング</p>
+                <a href="2025food.html" target="_blank">→ページへ</a>
+            </div>
+            <div class="content-card">
+                <img src="komedarank.jpg" alt="コメダRank">
+                <p class="title">コメダ珈琲店<br>お気に入りランキング</p>
+                <a href="komeda.html" target="_blank">→ ページへ</a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
