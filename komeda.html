@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head> 
+<meta charset="UTF-8">
+<title>コメダ珈琲店お気に入りランキング</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>コメダ珈琲店お気に入りランキング</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">トップページ</a></li>
+                <li><a href="aboutme.html">作成者</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="rank-card">
+            <p>高校2年生（2022年）から新作が出るたびにコメダ珈琲店に駆け込む私。短いコメダファン歴ではあるが、2025年11月末時点でのコメダ珈琲店個人的ランキングをつけさせていただく。</p>
+        </div>
+        <section class="rank-card">
+            <h2 class="rank-title">1位：シロノワール　白いブラックサンダー</h2>
+            <p><img src="1_white.jpg" alt="白いブラックサンダー" class="food-img"></p>
+            <p>はじめて食べたときは衝撃を受けるほど美味しかった</p>
+            <p>ミルク感が強く、練乳が好きな人は絶対ハマる…！</p>
+            <div class="info-box">
+                <p>販売開始：2023年10月4日</p>
+                <p>公式サイト：<a href="https://www.yurakuseika.co.jp/news/698/" target="_blank">⚡イナズマ級！！のコラボ再び⚡「シロノワール 白いブラックサンダー」「シロノワール　黒いブラックサンダー」販売</a></p>
+            </div>
+        </section>
+        <section class="rank-card">
+            <h2 class="rank-title">2位：シロノワール　桔梗信玄餅</h2>
+            <p><img src="2_singen.jpg" alt="桔梗信玄餅" class="food-img"></p>
+            <p>黒みつをかける時の幸せたるや🥹</p>
+            <p>中のおもちをイメージしたもちもち食感のクリームが最高</p>
+            <p>当たり前にレギュラーサイズ一人で食べました</p>
+            <div class="info-box">
+                <p>販売開始：2024年12月11日</p>
+                <p>公式サイト：<a href="https://www.komeda.co.jp/news/detail.html?cat=2&article=4359798" target="_blank">「桔梗信玄餅」とのコラボレーション商品販売のお知らせ</a></p>
+            </div>     
+        </section>
+        <section class="rank-card">
+            <h2 class="rank-title">3位：カラムーチョチキンバーガー</h2>
+            <p><img src="3_kara.jpg" alt="カラムーチョ" class="food-img"></p>
+            <p>大好きなカラムーチョと、大好きなコメダのコラボ</p>
+            <p>チキンのジューシーさに、カラムーチョの旨辛が合わさって最高</p>
+            <div class="info-box">
+                <p>販売開始：2025年2月26日</p>
+                <p>公式サイト：<a href="https://www.komeda.co.jp/news/detail.html?cat=2&article=5683995" target="_blank">「湖池屋監修 カラムーチョ チキンバーガー」販売のお知らせ</a></p>
+            </div>
+        </section>
+        <section class="rank-card">
+            <h2 class="rank-title">4位：お月見フルムーンてりやきバーガー</h2>
+            <p><img src="4_tukimi.jpg" alt="お月見" class="food-img"></p>
+            <p>てりやきと卵のとろとろが本当においしいの…</p>
+            <p>2025年シーズン、有名チェーン店の月見バーガーはほとんど食べたが<br>コメダが個人的1位だった</p>
+            <div class="info-box">
+                <p>販売開始：2025年9月3日</p>
+                <p>公式サイト：<a href="https://www.komeda.co.jp/news/detail.html?cat=2&article=9356689" target="_blank">お月見商品販売のお知らせ</a></p>
+            </div>
+        </section>
+        <section class="rank-card">
+            <h2 class="rank-title">5位：スイートパープルオーレ</h2>
+            <p><img src="5_purple.jpg" alt="パープル" class="food-img"></p>
+            <p>シロノワール紫いもも美味しかったが、このシーズンはオーレが優勝</p>
+            <p>コーヒーの苦みを紫いもの甘みが包み込む</p>
+            <p>黒ごまソースがこれまた最高</p>
+            <div class="info-box">
+                <p>販売開始：2023年10月25日</p>
+                <p>公式サイト：<a href="https://komeda-sankaku.com/announcements/srn6ac9fughddog8" target="_blank">レタスクラブと共同開発！ 魅惑のパープルスイーツ5種を季節限定で販売開始！</a></p>
+            </div>
+        </section>
+    </main>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+        const cards = document.querySelectorAll(".rank-card");
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                    observer.unobserve(entry.target); 
+                }
+            });
+        }, {
+            threshold: 0.2  // 20%見えたら
+        });
+
+        cards.forEach(card => observer.observe(card));
+    });
+    </script>
+</body>
+</html>
